@@ -1,0 +1,23 @@
+{
+  "name": "actions-lint",
+  "version": "1.0.0",
+  "description": "Lint your GitHub Actions workflows — catch anti-patterns, security issues, and performance problems",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ncc build src/index.ts -o dist --source-map --license licenses.txt",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": ["github-actions", "linter", "workflow", "ci"],
+  "author": "Tag <tag@austen.info>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.11.0",
+    "@vercel/ncc": "^0.38.3",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "js-yaml": "^4.1.0"
+  }
+}

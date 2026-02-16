@@ -1,0 +1,21 @@
+name: 'Actions Workflow Linter'
+description: '🔍 Lint your GitHub Actions workflows — catch anti-patterns, security issues, and performance problems'
+author: 'Tag'
+
+inputs:
+  path:
+    description: 'Path to workflows directory'
+    required: false
+    default: '.github/workflows'
+  fail-on-error:
+    description: 'Fail the action if errors are found'
+    required: false
+    default: 'true'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
+
+branding:
+  icon: 'check-circle'
+  color: 'green'
