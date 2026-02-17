@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "Lint your GitHub Actions workflows — catch anti-patterns, security issues, and performance problems",
   "main": "dist/index.js",
+  "bin": {
+    "actions-lint": "dist/cli/index.js"
+  },
   "scripts": {
-    "build": "ncc build src/index.ts -o dist --source-map --license licenses.txt",
+    "build": "ncc build src/index.ts -o dist --source-map --license licenses.txt && ncc build src/cli.ts -o dist/cli --source-map",
     "lint": "tsc --noEmit"
   },
   "keywords": ["github-actions", "linter", "workflow", "ci"],
